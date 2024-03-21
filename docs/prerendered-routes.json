@@ -1,6 +1,5 @@
 {
   "routes": [
-    "/",
     "/dashboard",
     "/dashboard/add-budget",
     "/dashboard/all-transactions",
