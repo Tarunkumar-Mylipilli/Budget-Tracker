@@ -1,6 +1,6 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SideNavComponent } from '../../side-nav/side-nav.component';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 import { CommonModule } from '@angular/common';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-budget',
   standalone: true,
-  imports: [SideNavComponent,ReactiveFormsModule,CommonModule],
+  imports: [SideNavComponent, ReactiveFormsModule, CommonModule], // Issue here, imports should be in the module, not the component
   templateUrl: './add-budget.component.html',
-  styleUrl: './add-budget.component.css'
+  styleUrl: './add-budget.component.css' // Issue here, should be styleUrls
 })
-export class AddBudgetComponent  implements OnInit{
+export class AddBudgetComponent implements OnInit {
   budgetForm: FormGroup;
   budgets: any[] = [];
   selectedMonth: string = '';
@@ -20,7 +20,7 @@ export class AddBudgetComponent  implements OnInit{
   editMode: boolean = false;
   editIndex: number = -1;
 
-  constructor(private formBuilder: FormBuilder, public service: ServiceService,public router:Router) {
+  constructor(private formBuilder: FormBuilder, public service: ServiceService, public router: Router) {
     this.budgetForm = this.formBuilder.group({
       month: ['', Validators.required],
       name: ['', Validators.required],
@@ -31,7 +31,6 @@ export class AddBudgetComponent  implements OnInit{
   ngOnInit(): void {
     this.loadBudgets();
   }
-  
 
   loadBudgets(): void {
     // Load all budgets initially
@@ -45,10 +44,10 @@ export class AddBudgetComponent  implements OnInit{
       this.totalBudget += budget.amount;
     }
   }
-  
-  goBack(): void {
-    this.router.navigate(['/dashboard/all-transactions']);}
 
+  goBack(): void {
+    this.router.navigate(['/dashboard/all-transactions']);
+  }
 
   onSubmit() {
     if (this.budgetForm.valid) {
@@ -88,6 +87,4 @@ export class AddBudgetComponent  implements OnInit{
       this.loadBudgets(); // Reload budgets after deletion
     }
   }
-
-
 }

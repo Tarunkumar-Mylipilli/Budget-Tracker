@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
-import { SideNavComponent } from '../../side-nav/side-nav.component';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';

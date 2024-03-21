@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SideNavComponent } from '../../side-nav/side-nav.component';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ServiceService } from '../service.service';
 import { CommonModule } from '@angular/common';

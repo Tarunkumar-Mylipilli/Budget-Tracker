@@ -1,0 +1,11 @@
+.table-wrapper {
+    height: 374px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+  .table-wrapper::-webkit-scrollbar{
+    width: 0;
+  }
+  table{
+    border-collapse: separate;
+    border-spacing: 0.1rem;
+  }
