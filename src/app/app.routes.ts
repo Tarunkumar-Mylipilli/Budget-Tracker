@@ -1,7 +1,10 @@
-import { Routes } from '@angular/router';
-import { LoginComponent } from './dashboard/login/login.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-export const routes: Routes =[
-    {path:'',component:LoginComponent},
-    {path:'dashboard',loadChildren:()=> import('./dashboard/dashboard.module').then(m=>m.DashboardModule)}
-];
+
+
+export const routes: Routes = [
+    { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // Default to dashboard
+    { path: '**', redirectTo: '/dashboard' } // Handle 404
+  ];
