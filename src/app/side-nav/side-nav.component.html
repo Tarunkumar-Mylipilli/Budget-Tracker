@@ -1,0 +1,57 @@
+<!-- <div class="row flex-grow-1 mx-5 p-5">
+    
+    <div class="d-flex flex-column justify-content-between h-100">
+    
+   </div>
+<ul>
+    <li>DashBoard</li>
+    <li>Todo Transactions</li>
+    <li>Income</li>
+    <li>Expense</li>
+</ul>
+<ul>
+    <li>Logout</li>
+</ul>
+</div> -->
+
+<div class="d-flex flex-column flex-shrink-0 p-3 " style="width: 160px; background-color: #F5F5F5;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <span class="fs-4">Welcome Back , Tarun</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto" style="line-height: 38px;">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page" [routerLink]="['/dashboard/all-transactions']">
+           <b>Dashboard</b>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark" [routerLink]="['/dashboard/todo-transactions']">
+           <b>Todo Transaction</b>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark" [routerLink]="['/dashboard/add-budget']">
+          Add-Budget
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark" [routerLink]="['/dashboard/expense']">
+          Expense
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark" [routerLink]="['/dashboard/income']">
+          Income
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+    <ul>
+        <li>
+            <a href="#" class="nav-link link-dark" [routerLink]="['/dashboard/login']">
+                Logout</a></li>
+    </ul>
+    </div>
+  </div>
